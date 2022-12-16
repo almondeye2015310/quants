@@ -33,7 +33,8 @@ def calc_rr(df):
 
         for v in only:
             df_ex[v] = df_ex[v]/df_ex["divider"]
-
+            
+        # リターンとリスク計算
         df_tmp = df.copy()
         df_extmp = df_ex.copy()
         tmp = np.matrix(df_tmp[ret])@np.matrix(df_tmp[weight].T)
